@@ -1,0 +1,721 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  background-color: rgb(0, 35, 36);
+  color: #fff; /* Adjusted text color */
+}
+
+header {
+  background : #49ed8d;
+  width: 100%;
+  height: 65px;
+  position: fixed;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: right;
+  padding:  20px;
+}
+
+.logo {
+  margin-top: -10px;
+  width: 200px;
+  height: 50px;
+  cursor: pointer;
+  
+}
+.mi {
+  
+  word-spacing: 2px;
+  letter-spacing: 2px;
+  text-align: start;
+  font-weight: 800;
+  font-size: 19px;
+  
+  cursor: pointer;
+  
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: auto; /* Adjust this value as needed */
+}
+
+nav li {
+  margin:  15px;
+}
+
+nav a {
+  text-decoration: uppercase;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.2em;
+  transition: 0.6s ease;
+}
+nav ul a:hover {
+  color: #000402; /* Adjust the hover color as needed */
+}
+.menu {
+  display:none;
+  cursor: pointer;
+  height: 20px;
+  
+  position: ;
+  right: 0;
+  top: 0;
+  margin-top: 10px;
+  margin-right: 10px;
+  z-index: 1;
+  transition: 0.7s ease;
+}
+
+.main {
+  padding: 80px 20px;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: right;
+}
+
+.main h2 {
+  color: rgb(250, 250, 250);
+  font-size: 3.5em;
+  font-weight: 700;
+}
+
+.main h3 {
+  color: rgb(244, 244, 244);
+  font-size: 2em;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+ 
+.who {
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: darkgreen;
+}
+
+.mainbtn {
+  color: black;
+  background-color: rgb(58, 195, 58);
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: 600;
+  display: inline-block;
+  padding: 0.9375em 2.1875em;
+  letter-spacing: 1px;
+  border-radius: 15px;
+  margin-bottom: 40px;
+  transition: 0.6s ease;
+}
+
+.mainbtn:hover {
+  background-color: rgb(117, 225, 117);
+  transform: scale(1.1);
+}
+
+.socialbtn a {
+  color: black;
+  font-size: 1.7em;
+  padding-right: 15px;
+}
+
+.card {
+  width: fit-content;
+  height: fit-content;
+  background-color: rgb(0, 35, 36);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 25px;
+  gap: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+}
+.main h3 span {
+  color: rgb(13, 253, 233);
+}
+.footer {
+  position: relative;
+  left: 0;
+  margin-top: auto;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+/* ... (your other styles) */
+/* ... (previous styles) */
+
+@media (max-width: 541px) {
+  body {
+    font-size: 12px;
+  }
+
+  .main h2 {
+    font-size: 1.8em;
+  }
+
+  .main h3 {
+    font-size: 1.5em;
+  }
+
+  .main h3 span {
+    color: rgb(13, 253, 233);
+  }
+}
+
+
+
+.menu span {
+  display: block;
+  width: 10px;
+  height: 0.158rem;
+  border-radius: 5px;
+  background-color: rgb(34, 193, 39);
+  box-shadow: 0 .5px 2px 0 hsla(0, 0%, 0%, .2);
+  transition: background-color .4s;
+  position: relative;
+}
+
+.menu span+span {
+  margin-top: .375rem;
+}
+
+.menu span:nth-child(1) {
+  animation: ease .8s menu-icon-top-2 forwards;
+}
+
+.menu span:nth-child(2) {
+  animation: ease .8s menu-icon-scaled-2 forwards;
+}
+
+.menu span:nth-child(3) {
+  animation: ease .8s menu-icon-bottom-2 forwards;
+}
+
+.menu:hover span:nth-child(1) {
+  animation: ease .8s menu-icon-top forwards;
+}
+
+.menu:hover span:nth-child(2) {
+  animation: ease .8s menu-scaled forwards;
+}
+
+.menu__icon:hover span:nth-child(3) {
+  animation: ease .8s menu-icon-bottom forwards;
+  background-color: rgb(255, 59, 48);
+}
+
+@keyframes menu-top {
+  0% {
+    top: 0;
+    transform: rotate(0);
+  }
+
+  50% {
+    top: .5rem;
+    transform: rotate(0);
+  }
+
+  100% {
+    top: .5rem;
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes menu-icon-top-2 {
+  0% {
+    top: .5rem;
+    transform: rotate(45deg);
+  }
+
+  50% {
+    top: .5rem;
+    transform: rotate(0);
+  }
+
+  100% {
+    top: 0;
+    transform: rotate(0);
+  }
+}
+
+@keyframes menu-bottom {
+  0% {
+    bottom: 0;
+    transform: rotate(0);
+  }
+
+  50% {
+    bottom: .5rem;
+    transform: rotate(0);
+  }
+
+  100% {
+    bottom: .5rem;
+    transform: rotate(135deg);
+  }
+}
+
+.parent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.child {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease-in-out;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+.child:hover {
+  background-color: white;
+  background-position: -100px 100px, -100px 100px;
+  transform: rotate3d(0.5, 1, 0, 30deg);
+  transform: perspective(180px) rotateX(60deg) translateY(2px);
+  box-shadow: 0px 10px 10px rgb(1, 49, 182);
+}
+
+button {
+  margin-bottom: 30px;
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+}
+
+.button:hover {
+  width: inherit;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate3d(0px, 0px, 15px) perspective(180px) rotateX(-35deg) translateY(2px);
+  border-radius: 50%;
+}
+
+.download-button-container {
+  text-align: center;
+}
+
+.download-button {
+  margin-bottom: 30px;
+  padding: 10px 20px;
+  background-color: #205019;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+  background-color: #38ed24;
+}
+
+.work {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 20px;
+  justify-content: center;
+  position: relative ;
+  right: -200px;
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: darkgreen;
+}
+
+.wel {
+  margin-bottom: 75px;
+  font-weight: 600;
+  font-size: 20px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  letter-spacing: 1px;
+ 
+  color: #ffffff;
+}
+
+.work2 {
+  font-weight: 800;
+  font-size: 30px;
+  color: #0bf8c5;
+}
+.card img {
+  display: inline-block; /* or display: inline; */
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px; /* Adjust the spacing between the images */
+}
+
+.skill {
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: darkgreen;
+}
+
+.svg-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.svg-item {
+  margin: 10px;
+  text-align: center;
+}
+
+.svg-name {
+  color: #ebf0eb;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Example styles, customize as needed */
+.js,
+.js2,
+.js3,
+.js4,
+.js5 {
+  width: 50px;
+  height: 50px;
+  color: #3498db;
+}
+
+.eml , .phone {
+  padding: 15px;
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: center;
+  font-weight: 700;
+ 
+  position: relative;
+  left: 260px;
+  padding: 15px;
+  font-size: 20px;
+  background-color: #000000;
+  border-radius: 5px;
+}
+
+.eml:hover,
+.phone:hover {
+  background-color: #07bc3a;
+  transition: 0.9s;
+
+   /* Change background color on hover */
+}
+
+
+.chatme {
+  margin-top: 120px;
+  align-items: center;
+  text-align:center ;
+ position: relative;
+  left: 0;
+  margin-top:15px;
+  bottom: 0;
+  width: fit-content;
+
+  text-align: center;
+}
+.work {
+  margin-bottom: 20px;
+  font-weight: 800;
+  font-size: 20px;
+  position: relative;
+  left: 270px;
+
+  text-align: center;
+  
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: darkgreen;
+}
+
+/* fotoor */
+footer {
+  position: relative;
+  left: 0;
+  margin-top: auto;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.card {
+  width: fit-content;
+  height: fit-content;
+  background-color: rgb(0, 35, 36);
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  padding: 25px 25px;
+  gap: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+}
+
+.card a {
+  display: inline-block; /* To allow margin */
+}
+
+.card img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  justify-content: center;
+  position: relative;
+right:-290px;
+  margin-right: 20px;
+}
+
+
+/* for all social containers */
+.socialContainer {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: rgb(44, 44, 44);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: .3s;
+}
+
+/* instagram */
+.containerOne:hover {
+  background-color: #d62976;
+  transition-duration: .3s;
+}
+
+/* twitter */
+.containerTwo:hover {
+  background-color: #00acee;
+  transition-duration: .3s;
+  
+}
+
+/* linkdin */
+.containerThree:hover {
+  background-color: #0072b1;
+  transition-duration: .3s;
+}
+
+/* Whatsapp */
+.containerFour:hover {
+  background-color: #128C7E;
+  transition-duration: .3s;
+}
+
+.socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: .3s;
+}
+
+.socialSvg {
+  width: 17px;
+}
+
+.socialSvg path {
+  fill: rgb(255, 255, 255);
+}
+
+.socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.copy {
+  font-weight: 600;
+  color: white;
+  font-size: 20px;
+}
+
+
+
+
+
+/* Media query for screens with a maximum width of 600px (adjust as needed) */
+@media screen and (max-width: 600px) {
+  .logo {
+    width: 150px;
+    left: 0;
+    top: 0;
+    
+    height: 50px;
+    cursor: pointer;
+  margin-bottom: -50px;
+  
+  }
+header {
+  background : #ffffff;
+  width:100%;
+  height: 70px;
+  position: fixed;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: right;
+  padding:  20px;
+
+
+}
+nav ul {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  margin-top: 5px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.8); /* Semi-transparent white background */
+  width: 100%;
+
+  padding-top: 60px; /* Adjust the top padding as needed */
+  transition: 0.9s ease;
+  scroll-behavior: smooth;
+  overflow-y: auto;
+  border: 2px solid #000; /* Add border around the menu */
+  border-radius:25px; /* Optional: Add border radius for rounded corners */
+  box-shadow: 0 0 10px rgb(74, 57, 57); /* Add scrollbar when needed */
+}
+
+nav ul li {
+  
+  margin: 35px 0; /* Add margin between each list item */
+}
+
+nav ul a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 900;
+border-radius: 10px;
+  font-size: 1.5em;
+  transition: color 0.3s ease;
+}
+
+nav ul a:hover {
+  color: #10f659; /* Adjust the hover color as needed */
+}
+
+
+  nav li {
+    margin: 0;
+  }
+
+  nav a {
+    font-size: 1.5em;
+  }
+
+  .menu {
+    display: block;
+    cursor: pointer;
+    height: 20px;
+  
+    position: relative; /* Add this line to specify the position */
+    right: 0;
+    top: 0;
+    margin-top: 10px;
+    margin-right: 10px;
+    z-index: 1000; /* Adjust the z-index value as needed */
+    transition: 0.7s ease;
+  }
+  
+  .chatme {
+    position: relative;
+    left: 51px;
+    margin-top: 15px;
+    bottom: 0;
+    width: fit-content;
+    display: block;
+
+    align-items: center;
+    text-align:left ;
+    justify-content: center;
+    text-align: center;
+  }
+ 
+ 
+  .card img {
+    width: auto;
+    display: flex;
+    height: 50px;
+    margin-bottom: 25px;
+    border-radius: 50%;
+    object-fit: cover;
+    justify-content: center;
+    position: relative;
+    left:41px;
+    margin-top: 55px;
+    margin-right: 20px;
+  }
+  .work {
+    margin-bottom: 30px;
+    font-weight: 800;
+    font-size: 20px;
+  
+   justify-content: center;
+    text-align: center;
+    position: relative;
+    left: 0px;
+     
+    
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: darkgreen;
+  }
+  .eml , .phone {
+    letter-spacing: 1px;
+    text-align: center;
+    font-weight: 700;
+    padding: 15px;
+    justify-content: center;
+    font-size: 20px;
+    position: relative;
+    left: 0px;
+    background-color: #000000;
+    border-radius: 5px;
+  }
+}
+```
+```
